@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>Yo Baby2!</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='css/materialize.css' rel='stylesheet' />
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/materialize.js"></script>
+ 
+<div class="container">
+  <div class="col s12">
+	<h2 class="center-align">yo Here are all the quotes</h2>
+</div>
+
+<div class="container">
+	<div class="col s12">
+		<table class="center-align">
+			<% for (var x in users) { %>
+			<tr>
+				<td><%= users[x].name %></td>
+				<td><%= users[x].quote %></td>
+				<td><%= users[x].like %></td>
+				<td><a class="waves-effect waves-light btn" href="/like/<%= users[x]._id %>">like</a></td>
+				<td><a class="waves-effect waves-light btn" href="/delete/<%= users[x]._id %>">delete</a></td>
+			</tr>
+				<% } %>
+			</table>
+		</div>
+	
+  <div class="col s12">
+    <a class="btn-large waves-effect waves-light" href="/">
+      back
+    </a>
+  </div>
+
+
+	</div>
+
+
+</div> <!--ends container -->
+</body>
+</html>
